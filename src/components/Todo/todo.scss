@@ -1,0 +1,48 @@
+.todo{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  input{
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border:2px solid #84E7FD;
+    background-color: #C7F5FF;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #5960FA;
+    font-size: 15px;
+  }
+  .button-complete{
+    background-color: rgba(89, 96, 250, 0);
+    border: none;
+    color: #30E72C;
+    cursor: pointer;
+  }
+  .button-complete:hover{
+    color: #0ACA06;
+  }
+
+  .button-edit{
+    background-color: rgba(89, 96, 250, 0);
+    border: none;
+    cursor: pointer;
+    color: #CBDD00;
+
+  }
+  .button-edit:hover{
+  color: #B7C702;
+  }
+
+  .button-delete{
+    background-color: rgba(89, 96, 250, 0);
+    border: none;
+    cursor: pointer;
+    color: #C70202
+  }
+  .button-delete:hover{
+  color: #B70202
+  }
+}

@@ -1,0 +1,20 @@
+.container{
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  .container_items{
+    margin-top: 200px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    .title{
+      font-size: 30px;
+      font-weight: 600;
+      color: #84E7FD;
+    }
+  }
+}

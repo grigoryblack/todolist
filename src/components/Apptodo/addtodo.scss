@@ -1,0 +1,43 @@
+.input_container{
+  margin-top: 20px;
+  input{
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border:2px solid #84E7FD;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: black;
+  }
+  input:hover{
+    border:2px solid #5960FA;
+  }
+}
+
+.button_container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  button{
+    width: 155px;
+    height: 32px;
+    background-color: #84E7FD;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+  }
+  button:hover{
+    background-color: #5960FA;
+    color: white;
+  }
+}
