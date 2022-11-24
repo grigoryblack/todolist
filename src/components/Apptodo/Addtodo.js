@@ -41,10 +41,13 @@ export default function AddTodo() {
             </div>
             {/*Календарь, который передает значение даты.*/}
             <TextField type="date" margin='small' required size="small" onChange = {(e) => setTime(e.target.value)}/>
-            <label>
-                Добавить файл
-                <input className="file_upload_style" ref={hiddenFileInput} type="file" onChange = {(e)=> setFile(e.target.value)}/>
-            </label>
+            <div className="file_container">
+                <label>
+                    Добавить файл
+                    <input className="file_upload_style" ref={hiddenFileInput} type="file" onChange = {(e)=> setFile(e.target.value)}/>
+                </label>
+                <div className="file_name">{file}</div>
+            </div>
             {/*Кнопка, передающая значение.*/}
             <div className="button_container">
                 <button>Добавить <AddIcon sx={{ fontSize: 20 }}/></button>

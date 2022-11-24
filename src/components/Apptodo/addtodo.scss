@@ -45,6 +45,18 @@
   }
 }
 
+.file_container{
+  display: flex;
+  font-size: 12px;
+  font-weight: bolder;
+  align-items: center;
+  .file_name{
+    width: 150px;
+    margin-top: 7px;
+    margin-left: 15px;
+  }
+}
+
 label{
   font-size: 13px;
   font-weight: bolder;
@@ -57,6 +69,7 @@ label{
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  margin-bottom: 5px;
   .file_upload_style {
     display: none;
   }
