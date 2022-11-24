@@ -29,6 +29,8 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
         }
     }
 
+
+
     // В этом файле рендерятся заполненные задачи и отображаются вместе с кнопками редактирования.
     return (
         <div className="todo">
@@ -42,10 +44,13 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
                     onChange={handleChange}
                 />
                 {/*Инпут с выводом времени и условием рендеринга для класса*/}
-                <input type="text"
+                <div className="under_todo_container">
+                    <input type="text"
                        value={todo.time}
                        className={handleTime() ? 'date_input active' : 'date_input'}
-                />
+                    />
+                    <div className="file_container">{todo.file}</div>
+                </div>
             </div>
             <div>
                 {/*Кнопки для воздействия на задачу с соответствующей функцией.*/}

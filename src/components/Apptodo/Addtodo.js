@@ -7,10 +7,12 @@ import 'react-calendar/dist/Calendar.css';
 import TextField from '@mui/material/TextField';
 
 
+
 export default function AddTodo() {
     // Константы для создания заголовка и времени.
     const [title,setTitle] = React.useState("");
-    const [time,setTime] = React.useState("")
+    const [time,setTime] = React.useState("");
+    const [file,setFile] = React.useState(null)
     //Функция которая передает переменные в бд.
     const hendleSubmit = async (e) =>{
         e.preventDefault();
@@ -18,11 +20,14 @@ export default function AddTodo() {
             await addDoc(collection(db,"todos"),{
                 title,
                 time,
+                file,
                 completed: false,
             });
             setTitle("")
         }
     }
+    const hiddenFileInput = React.useRef(null);
+
     // Этот документ рендерит окно для ввода задачи.
     return(
         // Форма для создания задачи.
@@ -36,6 +41,10 @@ export default function AddTodo() {
             </div>
             {/*Календарь, который передает значение даты.*/}
             <TextField type="date" margin='small' required size="small" onChange = {(e) => setTime(e.target.value)}/>
+            <label>
+                Добавить файл
+                <input className="file_upload_style" ref={hiddenFileInput} type="file" onChange = {(e)=> setFile(e.target.value)}/>
+            </label>
             {/*Кнопка, передающая значение.*/}
             <div className="button_container">
                 <button>Добавить <AddIcon sx={{ fontSize: 20 }}/></button>

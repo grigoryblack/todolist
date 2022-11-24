@@ -44,3 +44,20 @@
     color: white;
   }
 }
+
+label{
+  font-size: 13px;
+  font-weight: bolder;
+  display: flex;
+  margin-top: 15px;
+  cursor: pointer;
+  height: 30px;
+  width: 120px;
+  border: 2px solid #84E7FD;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  .file_upload_style {
+    display: none;
+  }
+}
