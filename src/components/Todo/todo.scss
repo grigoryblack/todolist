@@ -71,9 +71,10 @@
 
   .under_todo_container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 300px;
     justify-content: space-between;
+    cursor: pointer;
 
     .file_container{
       font-size: 13px;
