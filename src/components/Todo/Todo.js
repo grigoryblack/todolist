@@ -4,8 +4,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import './todo.scss';
 export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}) {
+    // Создаю константу для нового заголовка.
     const [newTitle, setNewTitle] = React.useState(todo.title);
-
+    // Функция для редактирования задачи.
     const handleChange = (e) => {
         e.preventDefault();
         if (todo.complete === true) {
@@ -15,16 +16,39 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
             setNewTitle(e.target.value);
         }
     };
+    // Функция для сравнивания времени.
+    const handleTime = (e) => {
+        let cursDate = Date.now();
+        let finalDate = Date.parse(todo.time);
+        console.log(cursDate)
+        console.log(finalDate)
+        if (cursDate >= finalDate){
+            return  true
+        } else {
+            return false
+        }
+    }
+
+    // В этом файле рендерятся заполненные задачи и отображаются вместе с кнопками редактирования.
     return (
         <div className="todo">
-            <input
-                style={{ textDecoration: todo.completed && "line-through" }}
-                type="text"
-                value={todo.title === "" ? newTitle : todo.title}
-                className="list"
-                onChange={handleChange}
-            />
+            <div className="time_task">
+                {/*Инпут с выводом задачи и условием рендеринга*/}
+                <input
+                    style={{ textDecoration: todo.completed && "line-through"  }}
+                    type="text"
+                    value={todo.title === "" ? newTitle : todo.title}
+                    className="list"
+                    onChange={handleChange}
+                />
+                {/*Инпут с выводом времени и условием рендеринга для класса*/}
+                <input type="text"
+                       value={todo.time}
+                       className={handleTime() ? 'date_input active' : 'date_input'}
+                />
+            </div>
             <div>
+                {/*Кнопки для воздействия на задачу с соответствующей функцией.*/}
                 <button
                     className="button-complete"
                     onClick={() => toggleComplete(todo)}

@@ -11,6 +11,22 @@
     align-items: center;
     flex-direction: column;
     width: 500px;
+
+    .add_button{
+      width: 155px;
+      height: 32px;
+      background-color: #84E7FD;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      color: black;
+      font-weight: bolder;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
     .title{
       font-size: 30px;
       font-weight: 600;
@@ -18,3 +34,4 @@
     }
   }
 }
+
